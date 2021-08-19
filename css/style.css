@@ -81,6 +81,7 @@ body {
     margin: auto;
     padding-top: 54px;
     display: flex;
+    margin-bottom: 100px;
 }
 
 .main-info {
@@ -122,6 +123,7 @@ body {
     border-radius: 6px;
     padding: 16px 36px;
     cursor: pointer;
+    border: none;
 }
 
 .main-title {
@@ -138,4 +140,9 @@ body {
     color: #635854;
     font-size: 124px;
     margin-top: 10px;
+    
+}
+
+path.current-floor {
+    opacity: 1;
 }
