@@ -135,7 +135,7 @@ body {
     color: #635854;
 }
 
-.counter {
+.floor-counter {
     font-family: 'Bebas Neue', sans-serif;
     color: #635854;
     font-size: 124px;
@@ -146,3 +146,112 @@ body {
 path.current-floor {
     opacity: 1;
 }
+
+.modal {
+    position: fixed; /* фиксированная позиция, поверх сайта */
+    left: 0; /* приклеиваем к левому краю */
+    top: 0; /* приклеиваем к верху */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* полупрозрачность */
+    display: flex; /* родительский блок гибкий */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.2s;
+}
+
+.is-open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-dialog {
+    position: relative;
+    max-width: 1000px;
+    min-height: 565px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+}
+
+.modal-image {
+    background-color: #EBEBEB;
+    width: 60%;
+}
+
+.modal-image {
+    text-align: center;
+    padding: 50px 0px 57px 0px;
+}
+
+.modal-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.modal-info {
+    padding: 50px 46px;
+}
+
+.flat-list {
+    padding: 0;
+    list-style: none;
+    margin-top: 55px;
+}
+.flat-item {
+    margin-bottom: 10px;
+}
+.flat-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    text-decoration: none;
+}
+
+.flat-link:hover {
+    color: #3596F5;
+    text-decoration: underline;
+}
+
+.modal-alert {
+    font-style: italic;
+    color: #635854;
+    margin-top: 56px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    border: none;
+    margin-top: 38px;
+    margin-right: 27px;
+    cursor: pointer;
+}
+
+.flats path {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.flats path:hover {
+    opacity: 1;
+}
+
+.flats path.current-flat { opacity: 1; }
+
+.flat-link.current-flat {
+    color: #3596F5;
+    text-decoration: underline;
+    }
